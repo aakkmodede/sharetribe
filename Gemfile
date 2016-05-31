@@ -2,6 +2,13 @@ source 'http://rubygems.org'
 
 ruby '2.3.1'
 
+# gems for deployment
+gem 'figaro'
+gem 'puma'
+
+
+
+
 gem 'rails', '4.2.5.2'
 
 gem 'coffee-rails', "~> 4.0.1"
@@ -146,6 +153,10 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'awesome_print', '~> 1.6.1'
   gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
 end
 
 group :test do
