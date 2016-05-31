@@ -145,6 +145,7 @@ group :development do
   gem 'better_errors', "~> 2.1.1"
   gem 'web-console', '~> 2.0'
   gem 'awesome_print', '~> 1.6.1'
+  gem 'capistrano'
 end
 
 group :test do
