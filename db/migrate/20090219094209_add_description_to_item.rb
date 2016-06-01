@@ -1,6 +1,6 @@
 class AddDescriptionToItem < ActiveRecord::Migration
   def self.up
-    add_column :items, :description, :text
+    add_column :items, :description, :text, :default => ""
   end
 
   def self.down
