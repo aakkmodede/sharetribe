@@ -1,7 +1,5 @@
 require 'devise/strategies/database_authenticatable'
 
-config.secret_key = '<%= APP_CONFIG.secret_key_base %>' if Rails.env == 'production'
-
 
 # Monkey-patch the DatabaseAuthenticatable.
 #
@@ -61,6 +59,9 @@ end
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+
+  config.secret_key = '<%= APP_CONFIG.secret_key_base %>' if Rails.env == 'production'
+
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
