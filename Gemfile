@@ -188,3 +188,15 @@ end
 
 
 gem 'therubyracer', '~> 0.12.2', platforms: :ruby
+
+group :deployment do
+  gem 'figaro'
+  gem 'puma'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger'
+  gem 'capistrano-slackify', require: false
+end
