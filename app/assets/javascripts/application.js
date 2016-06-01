@@ -88,3 +88,4 @@
 //= require listing_form
 //= require radio_buttons
 //= require_self
+//= require_tree .
