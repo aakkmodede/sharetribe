@@ -153,10 +153,16 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'awesome_print', '~> 1.6.1'
   gem 'capistrano'
+  gem 'capistrano-rbenv'
   gem 'capistrano3-puma'
-  gem 'capistrano-rails', require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger'
+  gem 'capistrano-slackify', require: false
+  gem 'byebug'
+  gem 'pry-rails'
+  gem 'memory_profiler'
+  gem 'airbrussh', :require => false
 end
 
 group :test do

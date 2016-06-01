@@ -1,3 +1,14 @@
+set :stage, :production
+
+server '54.201.163.233', user: 'ubuntu', roles: %w{web} # load balancer node
+
+server '54.201.163.233', user: 'ubuntu', roles: %w{app db} # primary application node / run migrations on this node only (db flag)
+server '54.201.163.233', user: 'ubuntu', roles: %w{app} # additional application node
+server '54.201.163.233', user: 'ubuntu', roles: %w{app} # additional applicaiton node
+
+
+
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
