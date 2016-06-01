@@ -1,6 +1,8 @@
 require 'devise/strategies/database_authenticatable'
 
-  config.secret_key = '3326b125bb71720b287ec1cdff3a5e50962ead6d052d755622aae9ae31505981a4a016750e1200262c2093a348ff582846d9a227d70a0f27f5f5accc9e23a255'
+config.secret_key = '<%= APP_CONFIG.secret_key_base %>' if Rails.env == 'production'
+
+
 # Monkey-patch the DatabaseAuthenticatable.
 #
 # The default DatabaseAuthenticatable takes only into account the user
