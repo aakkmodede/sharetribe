@@ -1,15 +1,13 @@
 source 'http://rubygems.org'
 
-ruby '2.3.1'
+ruby '~> 2.3.1'
 
 # gems for deployment
 gem 'figaro'
-gem 'puma'
 
 
 
-
-gem 'rails', '4.2.5.2'
+gem 'rails', '~> 4.2.5.2'
 
 gem 'coffee-rails', "~> 4.0.1"
 gem 'uglifier', "~> 2.7.2"
@@ -30,7 +28,7 @@ gem 'jquery-rails', '3.1.3'
 # Bundle the extra gems:
 
 # gem 'heroku' install the Heroku toolbelt (https://toolbelt.heroku.com/) instead (as gem had some problems)
-gem "passenger", "~> 5.0.18"
+gem "passenger", "~> 5.0.18", require: "phusion_passenger/rack_handler"
 
 gem "mysql2", "~> 0.3.14"
 gem 'haml', "~> 4.0.5"
