@@ -11,4 +11,3 @@ rescue LoadError
 end
 
 Kassi::Application.load_tasks
-fig
