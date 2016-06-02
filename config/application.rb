@@ -25,6 +25,8 @@ module Kassi
     # and thus class const
     VENDOR_CSS_PATH = Rails.root.join("vendor", "assets", "stylesheets")
 
+    config.assets.paths << Rails.root.join('app', 'vendor')
+
     # Load all rack middleware files
     config.autoload_paths += %W(#{config.root}/lib/rack_middleware)
 
