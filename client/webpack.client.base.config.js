@@ -13,9 +13,13 @@ const cssVariables = require('./app/assets/styles/variables');
 const devBuild = process.env.NODE_ENV !== 'production';
 const nodeEnv = devBuild ? 'development' : 'production';
 
-const replacePercentChar = require('./webpackConfigUtil');
-const assetHostEnv = typeof process.env.asset_host === 'string' ? `&asset_host=${process.env.asset_host}` : '';
-const assetHost = replacePercentChar(assetHostEnv);
+function repoPercentChar(replacePercentChar) {
+        replacePercentChar = require('./webpackConfigUtil');
+}
+function asstHostEnv(assetHostEnv) {
+        assetHostEnv = typeof process.env.asset_host === 'string' ? `&asset_host=${process.env.asset_host}` : '';
+}
+const assetHost = repoPercentChar(asstHostEnv);
 
 module.exports = {
   context: __dirname,
